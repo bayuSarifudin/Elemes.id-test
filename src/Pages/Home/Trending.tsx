@@ -3,7 +3,7 @@ import Container from "@/components/Container"
 import StarRating from "@/components/Rating"
 import { trending } from "@/constant/contents"
 import { trendingTxt } from "@/constant/locale"
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 function Trending() {
   const [isHover, setIsHover] = useState("");
@@ -14,6 +14,27 @@ function Trending() {
   const onMouseLeave = useCallback(() => {
     setIsHover('');
   }, []);
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  // Define a function to check the screen size
+  const checkScreenSize = () => {
+    setIsSmallScreen(window.innerWidth <= 640); // Adjust the width as needed for your "sm" breakpoint
+  };
+
+  useEffect(() => {
+    // Add a resize event listener to check the screen size on window resize
+    window.addEventListener('resize', checkScreenSize);
+
+    // Initial check when the component mounts
+    checkScreenSize();
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
+
   return (
     <Container>
       <div className="text-2xl md:text-[38px] font-semibold leading-[30px] md:leading-[50px] pb-6">
@@ -21,9 +42,9 @@ function Trending() {
         <h3 className="text-primary-01">{trendingTxt.receipt_lbl}</h3>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-[30px]">
+      <div className="grid grid-cols-1 max-sm:pb-10 sm:grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-[30px]">
         {
-          trending.map((el, index) => {
+          trending.slice(0, isSmallScreen ? 4 : trending.length).map((el, index) => {
             return (
               <div
                 key={index}
@@ -51,7 +72,7 @@ function Trending() {
         }
       </div>
 
-      <div className="w-full pt-16">
+      <div className="w-full pt-16 hidden sm:block">
         <Button width="w-max mx-auto" px="px-8" py="py-3" text={trendingTxt.all_receipt_lbl} />
       </div>
     </Container>
