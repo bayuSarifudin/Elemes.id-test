@@ -7,7 +7,7 @@ import { HeroTxt } from "@/constant/locale"
 function Hero() {
   return (
     <section className="w-full h-max relative py-28">
-      <div className="bg-food-pattern opacity-5 -z-10 bg-cover bg-no-repeat absolute top-0 h-full w-full">
+      <div className="bg-food-pattern opacity-[0.02] -z-10 bg-cover bg-no-repeat absolute top-0 h-full w-full">
       </div>
 
       <Container>
