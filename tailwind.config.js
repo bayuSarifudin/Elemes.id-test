@@ -29,7 +29,7 @@ export default {
 				'custom-02': '0px 11px 39px 0px rgba(0, 0, 0, 0.07)'
 			},
 			backgroundImage: {
-				'food-pattern': "url('./src/assets/images/bgImg.jpeg')"
+				'food-pattern': "url('@/assets/images/bgImg.jpeg')"
 			}
 		}
 	},
