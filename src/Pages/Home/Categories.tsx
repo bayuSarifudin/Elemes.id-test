@@ -45,7 +45,7 @@ function Categories() {
                 key={index}
                 className={`px-20 py-[30px] cursor-pointer flex items-center justify-center flex-col ${el.bg} rounded-lg w-[243px] relative ${isHover == (el.title ?? '') + index ? 'pb-14' : ''} gap-4`}
               >
-                <img className="w-[47px]" src={el.icon} alt="" />
+                <img className="w-[47px] h-[47px]" src={el.icon} alt="" />
                 <div className="text-center text-dark space-y-1">
                   <p className="font-semibold leading-5">{el.title}</p>
                   <p className="text-sm">{el.total + ' Items'}</p>
