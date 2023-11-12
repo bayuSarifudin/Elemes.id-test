@@ -1,27 +1,43 @@
-# React + TypeScript + Vite
+# Skill test Elemes Id
+in this app I got the design from here
+- [figma](https://www.figma.com/file/VXBvQvCeLRs65i4cLhihEi/Frontend-Test?node-id=0%3A1)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## technology used
+I am using Vite template react typecript with TailwindCss as the CSS framework, here is for the detail
+- node version = 20.0.0,
+- npm version = 9.6.4,
+- react version = ^18.2.15,
+- tailwind version = ^3.3.5
 
-Currently, two official plugins are available:
+if the node and npm version is not compatible, you can use nvm to adjust the version, [read here](https://github.com/nvm-sh/nvm)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## Set up and Instalation
+first you can clone the repo into your local machine first by using
+```
+git clone --the repo url--
+```
+and then you can change directory to the cloned repo and start installing all of the dependencies by running this command
+```
+cd Elemes.id-test
+npm install
+```
+or if you want to make sure the instalation is not failed, you can use
+```
+cd Elemes.id-test
+npm install --legacy-peer-deps
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Run the App and start Developing
+- Run this CLI to start the app
+
+```bash
+npm run dev
+```
+- Run this CLI to build the production-app
+
+```bash
+npm run build
+```
+## Preview deployed app
+
+if you want to check the app without cloning into your local, you can see it [HERE](https://miniapp-skilltestip.netlify.app/)
