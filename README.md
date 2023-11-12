@@ -40,4 +40,4 @@ npm run build
 ```
 ## Preview deployed app
 
-if you want to check the app without cloning into your local, you can see it [HERE](https://miniapp-skilltestip.netlify.app/](https://elemes-test-id.netlify.app/)https://elemes-test-id.netlify.app/)
+if you want to check the app without cloning into your local, you can see it [HERE](https://elemes-test-id.netlify.app/)
